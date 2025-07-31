@@ -3,16 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev:css": "sass --load-path=node_modules src/app/selenora.scss src/app/selenora.css",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@picocss/pico": "^2.1.1",
     "daisyui": "^5.0.50",
     "next": "15.4.5",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "sass": "^1.89.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
