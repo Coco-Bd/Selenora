@@ -1,0 +1,287 @@
+/* Import Pico CSS */
+@import url("https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css");
+
+/* Override Pico variables */
+:root {
+  --pico-primary: #2d5646 !important;
+  --pico-primary-hover: #1a3328 !important;
+  --pico-secondary: #d4941a !important;
+  --pico-background-color: #ffffff !important;
+  --pico-color: #111827 !important;
+  --pico-muted-color: #6b7280 !important;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+/* ========== NAVBAR SIMPLE COMME SHOPIFY ========== */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo simple */
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111827;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+/* Menu principal */
+.main-menu {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu a {
+  color: #374151;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.main-menu a:hover {
+  color: #2d5646;
+}
+
+/* Actions droite */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-btn,
+.account-btn,
+.cart-btn {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: #374151;
+  font-size: 20px;
+  transition: color 0.2s;
+}
+
+.search-btn:hover,
+.account-btn:hover,
+.cart-btn:hover {
+  color: #2d5646;
+}
+
+/* Menu mobile */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #374151;
+  cursor: pointer;
+}
+
+/* ========== CONTENU PRINCIPAL ========== */
+main {
+  padding-top: 0;
+}
+
+/* Hero section épurée */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #6b7280;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Boutons modernes */
+.btn {
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #2d5646;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1a3328;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+/* Logo container */
+.logo-container {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.logo-container img {
+  max-width: 280px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.logo-container p {
+  font-size: 18px;
+  color: #6b7280;
+  margin-bottom: 0;
+}
+
+/* Newsletter simple */
+.newsletter {
+  background: #f9fafb;
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.newsletter h2 {
+  font-size: 24px;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.newsletter p {
+  color: #6b7280;
+  margin-bottom: 32px;
+}
+
+.newsletter-form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 12px;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.newsletter button {
+  padding: 12px 24px;
+  background: #2d5646;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-menu {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav-actions {
+    gap: 12px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0 16px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .hero {
+    padding: 60px 16px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+}
